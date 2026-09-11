@@ -560,20 +560,10 @@
 
                         <tr class="border-b border-gray-100">
                             <td class="py-4 px-2 bg-zinc-100 font-black border-r border-gray-200 text-sm">18:00</td>
-                            <td class="schedule-cell">
-                                <div class="space-y-3">
-                                    <div><span class="schedule-title">Intermediário / Avançado</span><span class="schedule-teacher">Prof. Paulo</span></div>
-                                    <div class="border-t border-gray-200 pt-3"><span class="schedule-title text-purple-600">Iniciante / Mista</span><span class="schedule-teacher">Instrutora Lori • Tatame 2</span></div>
-                                </div>
-                            </td>
-                            <td class="schedule-cell"><span class="schedule-title">Intermediário / Avançado</span><span class="schedule-teacher">Prof. Paulo</span></td>
-                            <td class="schedule-cell">
-                                <div class="space-y-3">
-                                    <div><span class="schedule-title">Intermediário / Avançado</span><span class="schedule-teacher">Prof. Paulo</span></div>
-                                    <div class="border-t border-gray-200 pt-3"><span class="schedule-title text-purple-600">Iniciante / Mista</span><span class="schedule-teacher">Instrutora Lori • Tatame 2</span></div>
-                                </div>
-                            </td>
-                            <td class="schedule-cell"><span class="schedule-title">Intermediário / Avançado</span><span class="schedule-teacher">Prof. Paulo</span></td>
+                            <td class="schedule-cell"><span class="schedule-title text-purple-600">Iniciante / Mista</span><span class="schedule-teacher">Instrutora Lori • Tatame 2</span></td>
+                            <td class="schedule-empty">—</td>
+                            <td class="schedule-cell"><span class="schedule-title text-purple-600">Iniciante / Mista</span><span class="schedule-teacher">Instrutora Lori • Tatame 2</span></td>
+                            <td class="schedule-empty">—</td>
                             <td class="schedule-empty last:border-r-0">—</td>
                         </tr>
 
@@ -858,7 +848,6 @@
             seg: [
                 { time: "07:00", title: "Intermediário / Avançado", teacher: "Prof. Paulo", variant: "dark" },
                 { time: "12:00", title: "Todos os Níveis", teacher: "Prof. Paulo", variant: "dark" },
-                { time: "18:00", title: "Intermediário / Avançado", teacher: "Prof. Paulo", variant: "dark" },
                 { time: "18:00", title: "Iniciante / Mista", teacher: "Instrutora Lori • Tatame 2", variant: "purple" },
                 { time: "19:00", title: "Todos os Níveis", teacher: "Prof. Paulo • Tatame 1", variant: "dark" },
                 { time: "19:15", title: "Turma Feminina", teacher: "Instrutora Lori • Tatame 2", variant: "purple" },
@@ -866,14 +855,12 @@
             ],
             ter: [
                 { time: "12:00", title: "Todos os Níveis", teacher: "Prof. Paulo", variant: "dark" },
-                { time: "18:00", title: "Intermediário / Avançado", teacher: "Prof. Paulo", variant: "dark" },
                 { time: "19:00", title: "Todos os Níveis", teacher: "Prof. Paulo • Tatame 1", variant: "dark" },
                 { time: "20:30", title: "No-Gi", teacher: "Prof. João", variant: "amber" }
             ],
             qua: [
                 { time: "07:00", title: "Intermediário / Avançado", teacher: "Prof. Paulo", variant: "dark" },
                 { time: "12:00", title: "Todos os Níveis", teacher: "Prof. Paulo", variant: "dark" },
-                { time: "18:00", title: "Intermediário / Avançado", teacher: "Prof. Paulo", variant: "dark" },
                 { time: "18:00", title: "Iniciante / Mista", teacher: "Instrutora Lori • Tatame 2", variant: "purple" },
                 { time: "19:00", title: "Todos os Níveis", teacher: "Prof. Paulo • Tatame 1", variant: "dark" },
                 { time: "19:15", title: "Turma Feminina", teacher: "Instrutora Lori • Tatame 2", variant: "purple" },
@@ -881,7 +868,6 @@
             ],
             qui: [
                 { time: "12:00", title: "Todos os Níveis", teacher: "Prof. Paulo", variant: "dark" },
-                { time: "18:00", title: "Intermediário / Avançado", teacher: "Prof. Paulo", variant: "dark" },
                 { time: "19:00", title: "Todos os Níveis", teacher: "Prof. Paulo • Tatame 1", variant: "dark" },
                 { time: "20:30", title: "No-Gi", teacher: "Prof. João", variant: "amber" }
             ],
@@ -1105,7 +1091,7 @@
             }
             if (val.includes('horário') || val.includes('grade') || val.includes('aula') || val.includes('treino')) {
                 return {
-                    text: "Temos turmas às 7h nas segundas, quartas e sextas; às 7h30 nas terças e quintas; e ao meio-dia de segunda a sexta. À noite, o Prof. Paulo conduz turmas às 18h de segunda a quinta e às 19h de segunda a sexta, sempre no Tatame 1. A turma iniciante/mista da Lori acontece às segundas e quartas às 18h, e a turma feminina às 19h15, ambas no Tatame 2. O No-Gi ocorre de segunda a quinta às 20h30. Quer agendar uma aula experimental?",
+                    text: "Temos turmas Intermediário / Avançado às 7h nas segundas, quartas e sextas; e Todos os Níveis ao meio-dia e às 19h, de segunda a sexta, com o Prof. Paulo. A turma Iniciante / Mista da Lori acontece às segundas e quartas às 18h, e a Turma Feminina às 19h15, ambas no Tatame 2. O No-Gi ocorre de segunda a quinta às 20h30 com o Prof. João. Quer agendar uma aula experimental?",
                     showWhatsAppButton: false,
                     awaitingWhatsAppConfirmation: true
                 };
