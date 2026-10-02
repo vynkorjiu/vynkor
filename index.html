@@ -222,13 +222,6 @@
         </div>
     </header>
 
-    <!-- Tarja de inauguração -->
-    <div class="bg-vynkor-dark text-white px-4 py-3 text-center text-[11px] md:text-xs font-bold uppercase tracking-wider">
-        <a href="#planos" class="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 hover:text-vynkor-accent transition-colors">
-            <span>Primeira turma VYNKOR</span>
-            <span class="text-vynkor-accent">Cupom de inauguração: 5% de desconto no semestral e anual por tempo limitado</span>
-        </a>
-    </div>
 
     <!-- Hero Section -->
     <section class="bg-vynkor-light pt-12 md:pt-20 flex flex-col items-center text-center px-6 overflow-hidden">
@@ -415,10 +408,6 @@
                 <p class="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">
                     Escolha o plano ideal para seus objetivos. Todas as opções garantem acesso à nossa metodologia completa.
                 </p>
-                <div class="mt-5 inline-flex flex-col sm:flex-row items-center justify-center gap-2 rounded-md bg-vynkor-dark px-5 py-3 text-white shadow-md">
-                    <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-vynkor-accent">Inauguração</span>
-                    <span class="text-xs md:text-sm font-semibold">Garanta sua matrícula agora e tenha 5% de desconto nos planos semestral e anual por tempo limitado.</span>
-                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
@@ -728,65 +717,9 @@
         </svg>
     </a>
 
-    <!-- Popup de inauguração -->
-    <div id="opening-modal" class="fixed inset-0 z-[120] hidden items-center justify-center bg-black/60 px-4">
-        <div class="relative w-full max-w-md rounded-xl bg-white p-7 shadow-2xl">
-            <button id="close-opening-modal" class="absolute right-4 top-4 text-gray-400 hover:text-vynkor-dark transition-colors" aria-label="Fechar cupom de inauguração">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-            </button>
-            <span class="inline-flex rounded-full bg-vynkor-dark px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">Cupom de inauguração</span>
-            <h2 class="mt-5 text-2xl font-black leading-tight text-vynkor-dark">5% de desconto nos planos semestral e anual por tempo limitado.</h2>
-            <p class="mt-3 text-sm leading-relaxed text-gray-500">
-                Garanta sua matrícula na fase de inauguração e entre na primeira turma VYNKOR com condição especial nos planos de maior compromisso.
-            </p>
-            <a href="https://wa.me/555199678647?text=Ol%C3%A1%2C%20quero%20usar%20o%20cupom%20de%20inaugura%C3%A7%C3%A3o%20da%20VYNKOR%20em%20um%20plano%20semestral%20ou%20anual." target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex w-full items-center justify-center rounded-md bg-vynkor-dark px-5 py-4 text-xs font-bold uppercase tracking-wider text-white hover:bg-vynkor-gray transition-colors">
-                Garantir condição
-            </a>
-            <button id="dismiss-opening-modal" class="mt-3 w-full text-center text-[11px] font-semibold uppercase tracking-wider text-gray-400 hover:text-vynkor-dark transition-colors">
-                Ver planos primeiro
-            </button>
-        </div>
-    </div>
 
     <!-- SCRIPTS -->
     <script>
-        /* ========================================== */
-        /* POPUP DE INAUGURAÇÃO                     */
-        /* ========================================== */
-        const openingModal = document.getElementById('opening-modal');
-        const closeOpeningModal = document.getElementById('close-opening-modal');
-        const dismissOpeningModal = document.getElementById('dismiss-opening-modal');
-
-        function hideOpeningModal() {
-            if (!openingModal) return;
-            openingModal.classList.add('hidden');
-            openingModal.classList.remove('flex');
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            if (!openingModal) return;
-            setTimeout(() => {
-                openingModal.classList.remove('hidden');
-                openingModal.classList.add('flex');
-            }, 900);
-        });
-
-        [closeOpeningModal, dismissOpeningModal].forEach(button => {
-            if (!button) return;
-            button.addEventListener('click', () => {
-                hideOpeningModal();
-            });
-        });
-
-        if (openingModal) {
-            openingModal.addEventListener('click', (event) => {
-                if (event.target === openingModal) {
-                    hideOpeningModal();
-                }
-            });
-        }
 
         /* ========================================== */
         /* RASHGUARD INTERATIVA                      */
@@ -1084,7 +1017,7 @@
             
             if (val.includes('plano') || val.includes('preço') || val.includes('mensalidade') || val.includes('valor')) {
                 return {
-                    text: "Temos três planos principais: Mensal (R$ 330/mês), Semestral recorrente (6x de R$ 310) e Anual recorrente (12x de R$ 290). A matrícula é R$ 125,00 com rashguard oficial VYNKOR inclusa, marcando sua entrada na equipe. Na inauguração, novos alunos têm 5% de desconto nos planos semestral e anual por tempo limitado. Qual plano combina mais com seus objetivos? 🥋",
+                    text: "Temos três planos principais: Mensal (R$ 330/mês), Semestral recorrente (6x de R$ 310) e Anual recorrente (12x de R$ 290). A matrícula é R$ 125,00 com rashguard oficial VYNKOR inclusa, marcando sua entrada na equipe. Qual plano combina mais com seus objetivos? 🥋",
                     showWhatsAppButton: false,
                     awaitingWhatsAppConfirmation: false
                 };
