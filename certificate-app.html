@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Certificados | VYNKOR</title>
+  <link rel="stylesheet" href="/assets/certificates.css">
+  <script type="module" src="/assets/certificates.js"></script>
+</head>
+<body>
+  <header><a href="/" aria-label="Vynkor, início"><img src="/assets/vynkor-marca-vertical-branca.png" alt="VYNKOR Jiu-Jítsu"></a><span>Certificados</span><div id="account"></div></header>
+  <main id="app" aria-live="polite"><p class="empty">Carregando…</p></main>
+  <div id="notice" role="status"></div>
+  <dialog id="editor" aria-labelledby="editor-title">
+    <form id="certificate-form">
+      <div class="dialog-heading"><h2 id="editor-title">Emitir certificado</h2><button type="button" class="icon" data-close title="Fechar" aria-label="Fechar"><i data-lucide="x"></i></button></div>
+      <label>Nome completo do aluno<input name="student" required minlength="2" maxlength="120" autocomplete="off"></label>
+      <label>Graduação recebida<input name="graduation" required minlength="2" maxlength="100" list="graduations" autocomplete="off"></label>
+      <datalist id="graduations"><option value="Faixa branca"><option value="Faixa azul"><option value="Faixa roxa"><option value="Faixa marrom"><option value="Faixa preta"><option value="1º grau"><option value="2º grau"><option value="3º grau"><option value="4º grau"></datalist>
+      <label>Data da graduação<input name="awarded_on" type="date" required></label>
+      <label>Responsável pela graduação<input name="instructor" required minlength="2" maxlength="120" autocomplete="off"></label>
+      <p id="form-error" class="error" role="alert"></p>
+      <footer><button type="button" data-close>Cancelar</button><button type="submit" class="primary"><i data-lucide="check"></i><span id="save-label">Emitir certificado</span></button></footer>
+    </form>
+  </dialog>
+  <dialog id="details" aria-labelledby="detail-title"><div id="detail-body"></div></dialog>
+  <dialog id="confirmation" aria-labelledby="confirm-title"><form method="dialog"><h2 id="confirm-title">Cancelar certificado?</h2><p>A consulta pública passará a mostrar este certificado como cancelado. O endereço será preservado.</p><footer><button value="no">Voltar</button><button value="yes" class="danger">Cancelar certificado</button></footer></form></dialog>
+</body>
+</html>

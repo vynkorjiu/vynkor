@@ -1,0 +1,11 @@
+{
+  "name": "vynkor-certificates-local",
+  "compatibility_date": "2026-10-30",
+  "pages_build_output_dir": "dist",
+  "d1_databases": [{
+    "binding": "CERTIFICATES",
+    "database_name": "vynkor-certificates-local",
+    "database_id": "00000000-0000-0000-0000-000000000001",
+    "migrations_dir": "migrations"
+  }]
+}

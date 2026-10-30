@@ -1,0 +1,11 @@
+import { build } from 'esbuild';
+import { mkdir, copyFile, cp, writeFile } from 'node:fs/promises';
+await mkdir('dist/assets',{recursive:true});
+for (const file of ['index.html','certificate-app.html','robots.txt','sitemap.xml','deployment-check.txt']) await copyFile(file,`dist/${file}`);
+await cp('assets','dist/assets',{recursive:true});
+await copyFile('src/certificates.css','dist/assets/certificates.css');
+await build({entryPoints:['src/certificates.js'],outfile:'dist/assets/certificates.js',bundle:true,minify:true,format:'esm',target:'es2022'});
+await build({entryPoints:['server/worker.mjs'],outfile:'dist/_worker.js',bundle:true,minify:true,format:'esm',platform:'browser',target:'es2022'});
+await writeFile('dist/_routes.json',JSON.stringify({version:1,include:['/admin','/admin/*','/api/*','/certificados','/certificados/*'],exclude:[]}));
+await writeFile('dist/_headers','/certificate-app.html\n  X-Robots-Tag: noindex, nofollow, noarchive\n  Cache-Control: no-store\n');
+console.log('Build pronto em dist/.');
